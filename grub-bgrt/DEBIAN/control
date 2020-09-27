@@ -1,10 +1,10 @@
 Package: grub-bgrt
-Version: 1.0.0-1big1
+Version: 1.0.0-1big2
 Depends:
 Architecture: all
 Maintainer: Bruno Goncalves <www.biglinux.com.br>
 Section: admin
 Priority: optional
-Installed-Size:268
+Installed-Size:388
 Description: Grub theme from https://github.com/darac/grub-bgrt ported to BigLinux
 
