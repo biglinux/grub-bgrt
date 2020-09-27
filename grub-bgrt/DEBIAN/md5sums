@@ -1,6 +1,6 @@
 8f60d61c829b7ca043c0f2c635bc4a98  DEBIAN/postinst
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
-f6a322baec9efcf5bc97167b5aeefd50  DEBIAN/control
+bc76216fe7eef3ca530fdf8c978c0a6d  DEBIAN/control
 6fc6b4df7f6d3d428d9bd4e64c7b307f  usr/share/grub-bgrt/theme/progress_bar/progress_bar_c.png
 c3bda540186ea08d341b0dddac861189  usr/share/grub-bgrt/theme/progress_bar/progress_bar_e.png
 246e0f556b42545d09db9ff860207066  usr/share/grub-bgrt/theme/progress_bar/progress_bar_hl_c.png
@@ -48,4 +48,4 @@ a67991ec20bd4344e148884a937e54e8  usr/share/grub-bgrt/theme/icons/opensuse.png
 eb10a9d70b873ac5a1d9347af217b289  usr/share/grub-bgrt/theme/icons/ubuntu.png
 c5df465a2d0cf03f8775db6a32f320d3  usr/share/grub-bgrt/theme/icons/windows.png
 ce763988ca3497a059e4cafb92ba4afa  usr/share/grub-bgrt/theme/icons/xubuntu.png
-7c33c6e425342ae70c3dace9d0ace24d  usr/share/grub-bgrt/install.sh
+d8ca099e953f94f26b2c40e6d4cbf1b4  usr/share/grub-bgrt/install.sh
