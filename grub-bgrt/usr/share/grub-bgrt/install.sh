@@ -27,7 +27,7 @@ else
 # UEFI boot
 
 # OK. Convert the image to PNG (grub doesn't support BMPs)
-convert /sys/firmware/acpi/bgrt/image theme/bgrt.png
+convert /sys/firmware/acpi/bgrt/image -trim theme/bgrt.png
 
 # Replace the placeholders with the image offsets
 < theme/theme.txt.in awk \

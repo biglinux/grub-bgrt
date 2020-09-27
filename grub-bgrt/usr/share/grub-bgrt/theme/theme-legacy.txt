@@ -8,10 +8,10 @@ desktop-image: "background.png"
 
 # Terminal is low and wide
 terminal-font: "DejaVu Sans Mono Regular 12"
-terminal-left: "50"
-terminal-top: "100%-530"
-terminal-width: "100%-100"
-terminal-height: "480"
+terminal-left: "30"
+terminal-top: "300"
+terminal-width: "100%"
+terminal-height: "450"
 terminal-border: "0"
 
 #progress bar
@@ -32,18 +32,19 @@ terminal-border: "0"
 }
 
 + label {
-        top = 100%-47
+        top = 100%-30
         height = 26
         width = 100%
         color = "white"
         align = "center"
+        font = "DejaVu Sans Mono Regular 12"
         text = "Utilize as setas do teclado para escolher o sistema operacional e pressione enter"
 }
 
 # logo
 + image {
     top = 10%
-    left = 328
+    left = 50%-77
     file = "bgrt-legacy.png"
 }
 
