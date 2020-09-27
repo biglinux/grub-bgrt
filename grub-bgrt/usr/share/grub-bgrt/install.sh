@@ -5,16 +5,26 @@ GRUB_DIR=/boot/grub/themes
 GRUB_THEME=grub-bgrt
 FONTSIZE=24 # See README.md
 
-# Sanity Checks
-if [[ ! -r /sys/firmware/acpi/bgrt/image ]]; then
-	echo "Sorry, I can't read /sys/firmware/acpi/bgrt/image"
-	echo "Your system is not suitable for this theme"
-	exit 1
-fi
 
-command -v convert >/dev/null 2>&1 || { echo >&2 "I require convert (from imagemagick) but it's not installed.  Aborting."; exit 1; }
-command -v install >/dev/null 2>&1 || { echo >&2 "I require install (from coreutils) but it's not installed.  Aborting."; exit 1; }
-command -v awk >/dev/null 2>&1 || { echo >&2 "I require awk but it's not installed.  Aborting."; exit 1; }
+
+if [[ ! -r /sys/firmware/acpi/bgrt/image ]]; then
+# Legacy boot
+
+cp -f theme/theme-legacy.txt theme/theme.txt
+
+# Finally, install the theme
+
+install -d ${GRUB_DIR}/${GRUB_THEME}
+install -m644 theme/dejavu-mono-12.pf2 ${GRUB_DIR}/${GRUB_THEME}/
+install -m644 theme/lato-${FONTSIZE}.pf2 ${GRUB_DIR}/${GRUB_THEME}/
+install -m644 theme/{bgrt,background}.png ${GRUB_DIR}/${GRUB_THEME}/
+install -d ${GRUB_DIR}/${GRUB_THEME}/progress_bar/
+install -m644 theme/progress_bar/progress_bar_{nw,n,ne,w,c,e,sw,s,se,hl_c}.png ${GRUB_DIR}/${GRUB_THEME}/progress_bar/
+install -m644 theme/theme.txt ${GRUB_DIR}/${GRUB_THEME}/
+sed -i 's|.*GRUB_GFXMODE=.*|GRUB_GFXMODE="800x600"|g' /etc/default/grub
+
+else
+# UEFI boot
 
 # OK. Convert the image to PNG (grub doesn't support BMPs)
 convert /sys/firmware/acpi/bgrt/image theme/bgrt.png
@@ -32,13 +42,10 @@ convert /sys/firmware/acpi/bgrt/image theme/bgrt.png
 install -d ${GRUB_DIR}/${GRUB_THEME}
 install -m644 theme/dejavu-mono-12.pf2 ${GRUB_DIR}/${GRUB_THEME}/
 install -m644 theme/lato-${FONTSIZE}.pf2 ${GRUB_DIR}/${GRUB_THEME}/
-install -m644 theme/{bgrt,background}.png ${GRUB_DIR}/${GRUB_THEME}/
+install -m644 theme/{bgrt,bgrt-legacy,background}.png ${GRUB_DIR}/${GRUB_THEME}/
 install -d ${GRUB_DIR}/${GRUB_THEME}/progress_bar/
 install -m644 theme/progress_bar/progress_bar_{nw,n,ne,w,c,e,sw,s,se,hl_c}.png ${GRUB_DIR}/${GRUB_THEME}/progress_bar/
 install -m644 theme/theme.txt ${GRUB_DIR}/${GRUB_THEME}/
 
-echo "Install complete."
-echo "To use this theme, add:"
-echo "   GRUB_THEME=${GRUB_DIR}/${GRUB_THEME}/theme.txt"
-echo "to your grub config (e.g. /etc/default/grub),"
-echo "then rebuild grub (e.g. update-grub)."
+fi
+

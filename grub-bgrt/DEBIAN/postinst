@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+     
+/usr/share/grub-bgrt/install.sh
+
+sed -i 's|GRUB_THEME=.*|GRUB_THEME=/boot/grub/themes/grub-bgrt/theme.txt|g' /etc/default/grub
+
+update-grub
+
+exit 0
