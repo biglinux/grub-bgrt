@@ -1,6 +1,6 @@
 8f60d61c829b7ca043c0f2c635bc4a98  DEBIAN/postinst
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
-bc76216fe7eef3ca530fdf8c978c0a6d  DEBIAN/control
+31d768a73681341eb3016ee881faf1fc  DEBIAN/control
 6fc6b4df7f6d3d428d9bd4e64c7b307f  usr/share/grub-bgrt/theme/progress_bar/progress_bar_c.png
 c3bda540186ea08d341b0dddac861189  usr/share/grub-bgrt/theme/progress_bar/progress_bar_e.png
 246e0f556b42545d09db9ff860207066  usr/share/grub-bgrt/theme/progress_bar/progress_bar_hl_c.png
@@ -16,7 +16,6 @@ c3bda540186ea08d341b0dddac861189  usr/share/grub-bgrt/theme/progress_bar/progres
 660f45111e0926c8ce15650d43019a09  usr/share/grub-bgrt/theme/lato-24.pf2
 5e1dd73272f6143791a92278384eb7c4  usr/share/grub-bgrt/theme/theme.txt.in
 65424b898383ae2f40629bcad2b0926e  usr/share/grub-bgrt/theme/theme.txt
-707e0dca6771e0fafc6f5aef6b32ba20  usr/share/grub-bgrt/theme/bgrt.png
 8e565473214fe93b8fb766ce08105298  usr/share/grub-bgrt/theme/bgrt-legacy.png
 301135d826f67e9a851e26d443a46310  usr/share/grub-bgrt/theme/theme-legacy.txt
 a6e20cb973b5931a64bf326c482ff22d  usr/share/grub-bgrt/theme/icons/Manjaro.png
@@ -48,4 +47,4 @@ a67991ec20bd4344e148884a937e54e8  usr/share/grub-bgrt/theme/icons/opensuse.png
 eb10a9d70b873ac5a1d9347af217b289  usr/share/grub-bgrt/theme/icons/ubuntu.png
 c5df465a2d0cf03f8775db6a32f320d3  usr/share/grub-bgrt/theme/icons/windows.png
 ce763988ca3497a059e4cafb92ba4afa  usr/share/grub-bgrt/theme/icons/xubuntu.png
-d8ca099e953f94f26b2c40e6d4cbf1b4  usr/share/grub-bgrt/install.sh
+ecd4513f65063f2a8146d5491a78a4ed  usr/share/grub-bgrt/install.sh
