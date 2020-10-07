@@ -1,5 +1,5 @@
 Package: grub-bgrt
-Version: 1.0.0-1big7
+Version: 1.0.1-1big2
 Depends: imagemagick
 Architecture: all
 Maintainer: Bruno Goncalves <www.biglinux.com.br>
